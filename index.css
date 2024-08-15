@@ -17,6 +17,7 @@
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 body {
@@ -161,6 +162,7 @@ ul li a:hover {
 
 .my-linkedin:hover {
     background-color: #394956;
+    color: inherit;
 }
 
 image {

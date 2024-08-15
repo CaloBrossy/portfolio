@@ -88,18 +88,21 @@ ul li a:hover {
 
 .section-container {
     min-height: 100vh;
-    max-width: 1200px;
+    max-width: 100%;
     margin: auto;
     padding: 1rem;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    position: relative;
+    grid-template-rows: repeat(1,1fr);
     gap: 4rem;
+    z-index: 0;
 }
 
 .content {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    z-index: 0;
 }
 
 .subtitle {
@@ -115,6 +118,7 @@ ul li a:hover {
     line-height: 3rem;
     color: var(--color-oscuro);
     margin-bottom: 1rem;
+    margin-top: 5rem;
 }
 
 .title span {
@@ -128,40 +132,6 @@ ul li a:hover {
     margin-bottom: 2rem;
 }
 
-.btns {
-    display: flex;
-    gap: 1rem;
-}
-
-.btns button {
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: 2px;
-    padding: 1rem 2rem;
-    outline: none;
-    border: 2px solid #202C39;
-    border-radius: 10px;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-.contact-me {
-    background-color: #202C39;
-    color: #B8B08D;
-}
-
-.contact-me:hover {
-    background-color: #394956;
-}
-
-.my-linkedin {
-    background-color: var(--marron-oscuro);
-    color: var(--color-oscuro);
-}
-
-.my-linkedin:hover {
-    background-color: #394956;
-}
 
 image {
     display: flex;
@@ -175,8 +145,10 @@ image {
 }
 
 .image img {
-    width: min(25rem, 90%);
-    border-radius: 100%;
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
 }
 
 @media (width < 750px) {
